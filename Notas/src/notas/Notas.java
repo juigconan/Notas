@@ -2,6 +2,11 @@ package notas;
 
 import java.util.Scanner;
 
+/**
+ * @author Juan Ignacio Fernández Carrión
+ * @version 1.0
+ *
+ */
 public class Notas {
 
 	public final static void main(String[] args) {
@@ -10,7 +15,7 @@ public class Notas {
 		String cadena;
 		System.out.println("Introduzca una nota: ");
 		notas = reader.nextInt();
-
+		
 		cadena = califica.califica(notas);
 
 		System.out.print(cadena);
@@ -18,6 +23,7 @@ public class Notas {
 	}
 
 	/**
+	 * llama al metodo califica dentro de la clase califica en caso de que se usara ya que esta en desuso
 	 * @param notas
 	 * @return
 	 * @deprecated Use {@link notas.califica#califica(int)} instead
@@ -27,6 +33,7 @@ public class Notas {
 	}
 
 	/**
+	 * llama al metodo califica dentro de la clase califca en caso de que se usara ya que esta en desuso
 	 * @param num_nota
 	 * @return
 	 * @deprecated Use {@link califica#califica(int)} instead

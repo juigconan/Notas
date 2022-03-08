@@ -1,8 +1,13 @@
 package notas;
 
+/**
+ * @author Juan Ignacio Fernández Carrión
+ * @version 1.0
+ */
 public class califica {
 
 	/**
+	 * Devuelve la calificacion dependiendo de la nota introducida
 	 * @param num_nota
 	 * @return
 	 */
