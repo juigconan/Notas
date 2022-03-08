@@ -4,25 +4,36 @@ import java.util.Scanner;
 
 public class Notas {
 
-public static void main(String[] args) {
-Scanner reader = new Scanner(System.in);// Para pedir números por teclado
-int n = 0;
-String c = "";
-System.out.print("Introduzca una nota: ");
-n = reader.nextInt();
+	public final static void main(String[] args) {
+		Scanner reader = new Scanner(System.in);// Para pedir números por teclado
+		int notas;
+		String cadena;
+		System.out.println("Introduzca una nota: ");
+		notas = reader.nextInt();
 
-if (n >= 0 && n < 5)
-c = "Suspenso";
-else if (n >= 5 && n < 7)
-c = "Aprobado";
-else if (n >= 7 && n <9)
-c = "Notable";
-else if (n >= 9 && n <= 10)
-c = "Sobresaliente";
-else
-c = "La nota introducida no es correcta";
+		cadena = cali(notas);
 
-System.out.println(c);
-reader.close();
-}
+		System.out.print(cadena);
+		reader.close();
+	}
+
+	/**
+	 * @param notas
+	 * @return
+	 */
+	public static String cali(int notas) {
+		String cadena;
+		if (notas >= 0 && notas < 5) {
+			cadena = "Suspenso";
+		} else if (notas >= 5 && notas < 7) {
+			cadena = "Aprobado";
+		} else if (notas >= 7 && notas < 9) {
+			cadena = "Notable";
+		} else if (notas >= 9 && notas <= 10) {
+			cadena = "Sobresaliente";
+		} else {
+			cadena = "La nota introducida no es correcta";
+		}
+		return cadena;
+	}
 }
